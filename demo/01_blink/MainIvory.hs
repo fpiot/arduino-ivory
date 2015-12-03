@@ -21,6 +21,8 @@ ivory_main = proc "main" $ body $ do
 
 main_ivory_module :: Module
 main_ivory_module = package "MainIvory" $ do
+  incl c_init
+  incl c_delay
   incl ivory_main
 
 main :: IO ()

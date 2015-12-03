@@ -32,7 +32,7 @@ endif
 
 CC             = avr-gcc
 RUNHS          = runhaskell
-IVORYCFLAGS    =
+IVORYCFLAGS    = -I$(TOP)/_arduino
 
 # Override is only needed by avr-lib build system.
 
