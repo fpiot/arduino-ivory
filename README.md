@@ -28,16 +28,10 @@ $ sudo vi /etc/apt/preferences.d/avr
 Package: avrdude
 Pin: version 6.1*
 Pin-Priority: 1001
-$ sudo apt-get install binutils-avr gcc-avr avr-libc avrdude libgmp-dev
+$ sudo apt-get install binutils-avr gcc-avr avr-libc avrdude
 ```
 
 ### Mac OS X
-
-Install gmp package.
-
-```
-$ brew install gmp
-```
 
 Install AVR toolchain http://www.obdev.at/products/crosspack/index.html, and set PATH env.
 
@@ -52,9 +46,6 @@ $ which avr-gcc
 Install following package on [cygwin](https://www.cygwin.com/).
 
 * git
-* gcc-core
-* libgc-devel
-* libgmp-devel
 * make
 
 Install AVR toolchain http://winavr.sourceforge.net/.
