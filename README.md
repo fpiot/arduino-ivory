@@ -55,20 +55,15 @@ T.B.D.
 
 ## How to build
 
-Install ATS2 http://www.ats-lang.org/.
+Install Ivory http://ivorylang.org/.
 
 ```
-$ tar xf ATS2-Postiats-X.Y.Z.tgz
-$ export PATSHOME=`pwd`/ATS2-Postiats-X.Y.Z
-$ export PATH=${PATSHOME}/bin:${PATH}
-$ tar xf ATS2-Postiats-contrib-X.Y.Z.tgz
-$ export PATSHOMERELOC=`pwd`/ATS2-Postiats-contrib-X.Y.Z
-$ cd ${PATSHOME}
-$ ./configure
-$ make
+$ git clone https://github.com/GaloisInc/ivory.git
+$ cd ivory
+$ for i in ivory ivory-artifact ivory-opts ivory-backend-c ivory-eval ivory-stdlib ivory-examples ivory-hw ivory-model-check ivory-quickcheck ivory-serialize; do (cd $i && cabal install); done
 ```
 
-Compile the ATS source code for Arduino.
+Compile the Ivory source code for Arduino.
 
 ```
 $ cd arduino-ivory/demo/01_blink/
