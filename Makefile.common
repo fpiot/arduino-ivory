@@ -32,6 +32,7 @@ endif
 
 CC             = avr-gcc
 RUNHS          = runhaskell
+RUNHSFLAGS     = --src-dir=. --hdr-dir=.
 IVORYCFLAGS    = -I$(TOP)/_arduino
 
 # Override is only needed by avr-lib build system.
@@ -51,7 +52,7 @@ $(PRG).elf: libarduino.a $(IVORYOBJ)
 $(IVORYOBJ): %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 $(IVORYC): %.c: %.hs
-	$(RUNHS) $<
+	$(RUNHS) $< $(RUNHSFLAGS)
 
 libarduino.a: $(OBJ_ARDUINO)
 	avr-ar -r $@ $^
